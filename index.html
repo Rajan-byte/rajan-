@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href= "style.css">
+    <script src="https://kit.fontawesome.com/6de4d96b4e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+<div class="container">
+<nav>
+    <ul id="sidemenue">
+        <li><a href ="#header">Home</a></li>
+        <li><a href ="#About">About</a></li>
+        <li><a href ="#Services">Services</a></li>
+        <li><a href ="#contact">Contact</a></li>
+        <i class="fas fa-times" onclick="closemenue()"></i>
+    </ul>
+    <i class="fas fa-bars" onclick="openmenue()"></i>
+</nav>
+<div> 
+    <p> Web Designer</p>
+    <h1>Hello, I'am Rajan Regmi. I am from Youngstown, Ohio</h1>
+
+</div>
+</div>
+</div>
+<!---------about------------>
+<div id = "About">
+    <div class = "container">
+<div class = "row">
+    <div class="about-col-1">
+    <h1 class="title">About Me</h1>
+    <p>I am a junior student studying at Youngstown State University.<br> am pursuing my bachelor degree on Information Technology<br> and minor in Data Analytics.</p>
+    <div class="tab-titles">
+        <p class="tab-links active-link" onclick ="opentab('skills')">Skills</p>
+        <p class="tab-links"onclick ="opentab('experience')">Experience</p>
+        <p class="tab-links"onclick ="opentab('education')">Education</p>
+    </div>
+    <div class="tab-contents active-tab" id= "skills">
+      <ul>
+        <li> <span>UI/UX</span><br>Designing Web Interfaces</li>
+        <li> <span>Web Development</span><br>Developing Webpages</li>
+        <li> <span>PL/SQL</span><br>Quering the Database</li>
+    </ul>  
+    </div>
+    <div class="tab-contents" id = "experience">
+        <ul>
+          <li> <span>2020 - 2021 </span><br>Assistant Tools Manager at Infosys</li>
+          <li> <span> 2019 - 2020 </span><br>Advisor Assistant at TimesTech</li>
+          <li> <span>2018 - 2019</span><br>Office Assistant at TimesTech</li>
+      </ul>  
+      </div>
+      <div class="tab-contents" id = "education">
+        <ul>
+          <li> <span>2022 - present </span><br>Bachelor in Information and Technology<br> at Youngstown State University</li>
+      </ul>  
+      </div>
+</div>
+</div
+</div>
+</div>
+<!------------services------->
+<div id ="Services">
+    <div class="container">
+        <h1 class="title">My Services</h1> 
+        <div class="services-list">
+            <div>
+                
+                <h2>Web Design</h2>
+                <p>I can create beautiful and functional websites<br>that help your business stand out online.</p>
+                <a href = '#'>Learn More</a>
+            </div>
+            <div>
+            
+                <h2>UI/UX Design</h2>
+                <p>I can make digital products easy and enjoyable to use</p>
+                <a href = "#">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+    <!------contacts-------->
+    <div id="contact">
+        <div class="container">
+           <div class="row">
+            <div class="contact-left">
+                <h1 class = 'title'>Contact Me</h1>
+                    <p> <i class="fa-solid fa-square-arrow-up-right"></i>regmirajan296@gmail.com</p>
+                    <P> <i class="fa-solid fa-phone"></i>330.962.9892</P>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/rajan.regmi.775"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/rajanregmi01/"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/rajan-regmi-076ba2257"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name = "Name" placeholder="Your Name" required>
+                        <input type="email" name = "Email"placeholder= "Your Email"required>
+                        <textarea name = "Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+           </div> 
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add('active-tab')
+}
+</script>
+<script>
+    var sidemenue = document.getElementById('sidemenue');
+     function openmenue(){
+        sidemenue.style.right = '0';
+     }
+     function closemenue(){
+        sidemenue.style.right = '-200px';
+     }
+</script>
+</body>
+</html>
